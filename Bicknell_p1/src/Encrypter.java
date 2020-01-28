@@ -1,5 +1,4 @@
-import java.lang.Math; 
-public class Encrypter{
+ public class Encrypter{
     
     
     private int digits, encryptionFactor;
@@ -47,17 +46,6 @@ public class Encrypter{
             digits[i] += this.encryptionFactor;
             digits[i] %= 10;
         }
-    }
-
-    private int combineIntoInt(int[] digits){
-        int combinedInt = 0;
-        int power;
-        for(int i = 0; i < this.digits; i++){
-            power = this.digits - i - 1;
-            combinedInt += (digits[i] * Math.pow(10,power));
-        }
-
-        return combinedInt;
     }
 
 }

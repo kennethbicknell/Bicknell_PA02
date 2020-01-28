@@ -15,16 +15,9 @@
         seperateIntoDigit(digits, plainData);
         swap(0, 2, digits);
         swap(1, 3, digits);
-        addEncyptionFactor(digits);
+        addEncryptionFactor(digits);
         cryptData = digits;
 
-        
-
-
-        
-        
-        
-        
         return cryptData;
     }
 
@@ -41,7 +34,7 @@
         array[pos2] = temp;
     }
 
-    private void addEncyptionFactor(int[] digits){
+    private void addEncryptionFactor(int[] digits){
         for(int i = 0; i < this.digits; i++){
             digits[i] += this.encryptionFactor;
             digits[i] %= 10;

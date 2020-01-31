@@ -22,11 +22,6 @@ public class BMICalculator{
     private String BMICategory;
     private Scanner in;
     
-    public static void main(String[] args) throws Exception {
-        BMICalculator test = new BMICalculator();
-        test.displayBmi();
-    }
-
     public BMICalculator(){
         this.in = new Scanner(System.in);
     }

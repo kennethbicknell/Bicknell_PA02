@@ -25,6 +25,7 @@ public class Application {
             System.out.print("Your encrypted data is: ");
             modifiedData = encrypter.encrypt(userData);
         }else{
+            System.out.print("Your decrypted data is: ");
             modifiedData = decrypter.decrypt(userData);
         }
         

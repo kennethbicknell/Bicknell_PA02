@@ -1,3 +1,17 @@
+/*
+    get users data
+        get type
+        get values based on type
+    use data to calculate BMI
+        use method for each formula
+        use if to calc category
+    display both BMI and category
+*/
+
+
+
+
+
 import java.util.Scanner;
 
 public class BMICalculator{
@@ -42,9 +56,9 @@ public class BMICalculator{
 
     private void readImperialData(){
         System.out.print("Enter your height in inches: ");
-        this.height = in.nextFloat();
+        this.setHeight(in.nextDouble());
         System.out.print("Enter your weight in pounds: ");
-        this.weight = in.nextDouble();
+        this.setWeight(in.nextDouble());
 
         if(this.height < 0 || this.weight < 0){
             System.exit(0);
@@ -53,9 +67,9 @@ public class BMICalculator{
 
     private void readMetricData(){
         System.out.print("Enter your height in meters: ");
-        this.height = in.nextFloat();
+        this.setHeight(in.nextDouble());
         System.out.print("Enter your weight in kilograms: ");
-        this.weight = in.nextDouble();
+        this.setWeight(in.nextDouble());
 
         if(this.height < 0 || this.weight < 0){
             System.exit(0);
@@ -100,6 +114,30 @@ public class BMICalculator{
             calculateBmi();
         }
         System.out.printf("With a BMI of %.1f you are %s\n", this.BMI, this.BMICategory);
+    }
+
+    public double getWeight(){
+        return this.weight;
+    }
+
+    public double getHeight(){
+        return this.Height;
+    }
+
+    public double getBmi(){
+        return this.BMI;
+    }
+
+    public String getBmiCategory(){
+        return this.BMICategory;
+    }
+
+    private void setHeight(double height){
+        this.height = height;
+    }
+
+    private void setWeight(double weight){
+        this.weight = weight;
     }
 
     

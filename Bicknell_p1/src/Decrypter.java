@@ -1,3 +1,6 @@
+/*
+    same process as encrypt except subtract 7 and add 10 if negative
+*/
 public class Decrypter{
     private int digits, encryptionFactor;
     

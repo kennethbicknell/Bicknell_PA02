@@ -1,3 +1,11 @@
+ /*
+    Seperate num into digits
+        division and mod
+    do the requested swaps
+    add 7 to each (mod over 10)
+    print number with leading zeros
+        print array
+ */
  public class Encrypter{
     
     

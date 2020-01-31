@@ -1,3 +1,12 @@
+/*
+    get usr data
+        ask for desired operation
+        ask for data
+    encrypt/decrypt
+        use if based on usr operation
+    print data 
+        data is array so print array method for leading zeros
+*/
 import java.util.Scanner;
 public class Application {
     public static void main(String[] args){

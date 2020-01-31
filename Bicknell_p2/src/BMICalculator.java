@@ -24,8 +24,6 @@ public class BMICalculator{
     
     public static void main(String[] args) throws Exception {
         BMICalculator test = new BMICalculator();
-        test.readUserData();
-        test.calculateBmi();
         test.displayBmi();
     }
 
@@ -77,13 +75,13 @@ public class BMICalculator{
     }
 
     public void calculateBmi(){
-        if(this.unitType.equalsIgnoreCase("metric")){
+        if(this.unitType == null){
+            readUserData();
+            calculateBmi();
+        }else if(this.unitType.equalsIgnoreCase("metric")){
             calculateBMIMetric();
         } else if (this.unitType.equalsIgnoreCase("Imperial")){
             calculateBMIImperial();
-        } else {
-            readUserData();
-            calculateBmi();
         }
     }
 
@@ -110,7 +108,7 @@ public class BMICalculator{
     }
 
     public void displayBmi(){
-        if(this.BMICategory.equals(null)){
+        if(this.BMICategory == null){
             calculateBmi();
         }
         System.out.printf("With a BMI of %.1f you are %s\n", this.BMI, this.BMICategory);

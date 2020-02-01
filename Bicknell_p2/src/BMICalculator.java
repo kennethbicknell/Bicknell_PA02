@@ -114,7 +114,7 @@ public class BMICalculator{
     }
 
     public double getHeight(){
-        return this.Height;
+        return this.height;
     }
 
     public double getBmi(){
